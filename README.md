@@ -1,5 +1,5 @@
 # algorithm-training
-Algorithm technique training using scala language!!
+Algorithm techniques training using scala language!!!
 
 ## Backtracking
 Backtracking is a technique used to build up to a solution to a problem incrementally. 
@@ -11,4 +11,54 @@ The difference is that depth-first search will guarantee that it visits every no
 
 Because backtracking breaks problems into smaller subproblems, it is often combined with dynamic programming, or a divide-and-conquer approach.
 
+Problems
+- Find words
+- N-Queens
+- Possible Ways Climb a Staircase
+
 Problems are solved in ai.backtracking package.
+
+## Linked Lists
+A linked list is a sequential-access data structure used for storing ordered elements. They prioritize quick and easy data insertion and deletion over item lookup. All linked lists are collections of node data structures that are connected by pointers - that's where the "link" in "linked list" comes from.
+
+````
+// Definition for singly-linked list:
+class ListNode[T](x : T) {
+  var value: T = x
+  var next: Option[ListNode[T]] = None
+}
+
+´´´´
+
+Problems
+- Merge Linked Lists
+- Reverse in a group of k elements
+
+Problems are solved in ai.linkedlists package
+
+## Tree
+A tree is a data structure composed of parent and child nodes. Each node contains a value and a list of references to its child nodes. Trees borrow a lot of language from nature (each tree has a root node and leaf nodes) and from family trees (there are parent and child nodes).
+
+````
+// Definition for singly-linked list:
+class ListNode[T](x : T) {
+  var value: T = x
+  var next: Option[ListNode[T]] = None
+}
+
+´´´´
+
+Problems
+- Symmetric Tree
+- Is Subtree
+- Delete from an Binary Search Tree
+
+Problems are solved in ai.tree package
+
+
+## Depth-First Search & Breadth-First Search
+Depth-first search (DFS) and breadth-first search (BFS) are common algorithms for searching trees or graphs.
+
+In DFS, you start at the root of the tree (or a selected node if it’s a graph) and search as far as possible along each branch before backtracking. DFS is great for searching trees that are deeper than they are wide.
+
+In BFS, on the other hand, you start at the root of the tree (or a selected node in a graph) and search each subsequent level of nodes before moving on to the next level. BFS is great for searching trees that are wider than they are deep. 
