@@ -20,8 +20,8 @@ object worksheet {
   	type Pos = (Int, Int)
   	type Mov = (Pos, TypeMov)
   	
-  	val xMov = List(-2, -1, 1, 2, 1, -1);     
-  	val yMov = List(0, -2, -2, 0, 2, 2);     
+  	val iMov = List(0, -2, -2, 0, 2, 2);     
+    val jMov = List(-2, -1, 1, 2, 1, -1);     
   	val nameMov = List("L", "UL", "UR", "R", "LR", "LL");
                                                   
   	
@@ -33,8 +33,8 @@ object worksheet {
   			return Array(current);
   		}else{
   			// Calculate all possible movimentes
-  			for(i <- 0 until xMov.size){
-  				val newPos = (lastPos._1 + xMov(i), lastPos._2 + yMov(i))
+  			for(i <- 0 until iMov.size){
+  				val newPos = (lastPos._1 + iMov(i), lastPos._2 + jMov(i))
   				if(newPos._1 >= 0 && newPos._1 < n && newPos._2 >= 0 && newPos._2 < n
   						&& !visited.contains(newPos)){
   						val newMov: Mov = (newPos, nameMov(i))
@@ -56,7 +56,7 @@ object worksheet {
         	System.out.println(shortest.size - 1)
         	System.out.println(shortest.tail.map(a => a._2).mkString(" "))
         }
-    }                                          
+    }                                       
   	
   	
   	def main(args: Array[String]) = printShortestPath(7, 6, 6, 0, 1)          //> Impossible
